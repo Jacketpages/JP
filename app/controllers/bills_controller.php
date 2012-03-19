@@ -1649,7 +1649,8 @@
 				$search = "";
 			}
 			$search = low($search);
-			$filters = array("lower(Bill.title) like '%" . $search . "%' or lower(Bill.number) like '%" . $search . "%' or lower(Bill.description) like '%" . $search . "%'");
+			
+			$filters = array("lower(Bill.title) like '%" . $search . "%' or lower(Bill.number) like '%" . $search . "%' or lower(Bill.description) like '%" . $search . "%' or lower(Submitter.name) like '%" . $search . "%'");
 			$this -> Session -> write($this -> name . '.keyword', $search);
 			return $filters;
 		}

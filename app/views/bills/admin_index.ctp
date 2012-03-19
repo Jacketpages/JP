@@ -136,7 +136,8 @@
 				?></th>
 				<?php }?>
 			</tr>
-			<?php $i = 0;
+			<?php 
+			$i = 0;
 foreach ($bills as $bill):
 $class = null;
 if ($i++ % 2 == 0)
