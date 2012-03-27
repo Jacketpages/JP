@@ -13,7 +13,7 @@
 	echo $this->Form->input('org', array ('label' => 'Organization', 'default' => $org [0] ['Organization'] ['name'], 'readonly' => 'readonly'));
 	echo $this->Form->hidden('organization_id', array ('default' => $org [0] ['Organization'] ['id']));
 	echo $this->Form->input('username', array ('label' => 'Member Name (or gatech email prefix) -- You must select from suggestions when they appear', 'id' => 'userName'));
-	echo $this->Form->hidden('user_id', array ('id' => 'user_id'));
+   echo "<div>Note: Usernames will not show up in the dropdown box for those who do not have a Jacketpages Account.</div>";
 	echo $this->Form->input('role', array ('options' => array ('Officer' => 'Officer', 'Member' => 'Member', 'President' => 'President', 'Treasurer' => 'Treasurer', 'Advisor' => 'Advisor')));
 	if ($this->isLevel('admin') || $user['Membership']['role'] == 'President')
 	{
